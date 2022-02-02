@@ -10,31 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_02_174506) do
-
-  create_table "contacts", force: :cascade do |t|
-    t.string "name", null: false
-    t.date "birthdate"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_contacts_on_user_id"
-  end
-
-  create_table "phones", force: :cascade do |t|
-    t.integer "number", null: false
-    t.string "kind", null: false
-    t.boolean "primary", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "age"
-    t.text "bio"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
