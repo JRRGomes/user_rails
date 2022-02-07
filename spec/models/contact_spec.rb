@@ -21,6 +21,9 @@ describe Contact do
     end
   end
   describe 'associations' do
-    it { should belong_to(:user) }
+    context 'when create new Contact' do
+      it { should belong_to(:user) }
+      it { should have_many(:phones) }
+    end
   end
 end
