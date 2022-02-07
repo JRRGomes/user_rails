@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_02_03_125717) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
-    t.index ["name"], name: "index_contacts_on_name", unique: true
+    t.index ["user_id", "name"], name: "index_contacts_on_user_id_and_name", unique: true
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 2022_02_03_125717) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "contact_id"
+    t.index ["contact_id", "number"], name: "index_phones_on_contact_id_and_number", unique: true
     t.index ["contact_id"], name: "index_phones_on_contact_id"
-    t.index ["number"], name: "index_phones_on_number", unique: true
   end
 
   create_table "users", force: :cascade do |t|
