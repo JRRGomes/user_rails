@@ -15,11 +15,6 @@ describe Phone do
       it { should validate_presence_of(:kind) }
     end
 
-    context 'when create new phone with blank primary value' do
-      it { should validate_presence_of(:primary) }
-    end
-  end
-
   describe 'associations' do
     context 'when create new Phone' do
       it { should belong_to(:contact) }
