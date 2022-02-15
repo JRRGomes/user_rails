@@ -1,9 +1,24 @@
-<h1>Users</h1>
-
-<% @users.each do |user| %>
-  <ul>
-    <li><%= user.name %></li>
-    <li><%= user.bio %></li>
-    <li><%= user.age %></li>
-  </ul>
-<% end %>
+<div class="container">
+  <table class="table">
+    <caption class="table__caption">User</caption>
+    <thead>
+      <tr class="table__head">
+        <th>Name</th>
+        <th>Age</th>
+        <th>Bio</th>
+        <th>Contacts</th>
+        <th>Phones</th>
+      </tr>
+    </thead>
+    
+    <% @users.each do |user| %>
+    <tbody class="table__body">
+      <tr>
+        <th><%= user.name %></th>
+        <th><%= user.age %></th>
+        <th><%= user.bio %></th>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</div>

@@ -1,3 +1,16 @@
 :root {
   --main-font: 'Montserrat', sans-serif;
+
+  --space-unit: 1em;
+  --space-xxx-small: calc(0.10*var(--space-unit));
+  --space-xx-small: calc(0.25*var(--space-unit));
+  --space-x-small: calc(0.5*var(--space-unit));
+  --space-small: calc(0.75*var(--space-unit));
+  --space-medium: calc(1.25*var(--space-unit));
+  --space-large: calc(2*var(--space-unit));
+  --space-x-large: calc(3*var(--space-unit));
+
+  --dark-grey: #333333;
+  --soft-grey: #a7a7a7;
+  --light-grey: #dddddd;
 }
