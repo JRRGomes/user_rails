@@ -1,0 +1,26 @@
+<div class="container">
+  <table class="table">
+    <caption class="table__caption">User</caption>
+    <thead>
+      <tr class="table__head">
+        <th>Name</th>
+        <th>Age</th>
+        <th>Bio</th>
+        <th>Contacts</th>
+        <th>Phones</th>
+      </tr>
+    </thead>
+    
+    <tbody class="table__body">
+    <% @users.each do |user| %>
+      <tr>
+        <th><%= user.name %></th>
+        <th><%= user.age %></th>
+        <th><%= user.bio %></th>
+        <th><%= user.contacts.length %></th>
+        <th><%= user.phones.length %></th>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

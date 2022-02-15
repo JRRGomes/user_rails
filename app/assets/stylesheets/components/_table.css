@@ -1,0 +1,30 @@
+.table {
+  border-collapse: collapse;
+  margin: var(--space-large);
+  font-size: var(--space-unit);
+  min-width: var(--space-large);
+  box-shadow: 0 0 var(--space-small) rgba(0, 0, 0, 0.15);
+}
+
+.table__caption {
+  font-size: var(--space-medium);
+  padding: var(--space-unit);
+  color: var(--dark-grey);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.table__head {
+  background-color: var(--dark-grey);
+  color: #ffffff;
+  text-align: center;
+}
+
+.table th, 
+.table td {
+  padding: var(--space-small) var(--space-unit);
+}
+
+.table__body {
+  border-bottom: var(--space-xxx-small) solid var(--light-grey);
+}
