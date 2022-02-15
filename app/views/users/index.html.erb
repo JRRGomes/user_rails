@@ -8,6 +8,7 @@
         <th>Bio</th>
         <th>Contacts</th>
         <th>Phones</th>
+        <th></th>
       </tr>
     </thead>
     
@@ -19,6 +20,7 @@
         <th><%= user.bio %></th>
         <th><%= user.contacts.length %></th>
         <th><%= user.phones.length %></th>
+        <th><%= link_to 'Show', user %></th>
       </tr>
     <% end %>
     </tbody>
