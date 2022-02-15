@@ -1,5 +1,16 @@
-<h1>Users#show</h1>
-<p><%= @user.name %></p>
-<p><%= @user.age %></p>
-<p><%= @user.bio %></p>
-
+<div class="container">
+  <table class="table">
+    <tr>
+      <th class="table__head table__body">Name</th>
+      <th class="table__body"><%= @user.name %></th>
+    </tr>
+    <tr>
+      <th class="table__head table__body">Age</th>
+      <th class="table__body"><%= @user.age %></th>
+    </tr>
+    <tr>
+      <th class="table__head table__body">Bio</th>
+      <th class="table__body"><%= @user.bio %></th>
+    </tr>
+  </table>
+</div>
