@@ -4,6 +4,10 @@
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
+    <% @user.errors.full_messages_for(:name).each do |message| %>
+
+      <div><%= message %></div>
+    <% end %>
   </div>
 
   <div>
