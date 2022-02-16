@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: '...', age: '...', bio: '...')
+    @user = User.new(user_params)
 
     if @user.save
       redirect_to @user
@@ -29,4 +29,9 @@ class UsersController < ApplicationController
 
   def destroy
   end
+
+  private
+    def user_params
+      params.require(:user).permit(:name, :age, :bio)
+    end
 end
