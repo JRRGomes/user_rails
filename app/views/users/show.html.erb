@@ -1,2 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+  <table class="table">
+    <tr>
+      <th class="table__head table__body">Name</th>
+      <th class="table__body"><%= @user_show.name %></th>
+    </tr>
+    <tr>
+      <th class="table__head table__body">Age</th>
+      <th class="table__body"><%= @user_show.age %></th>
+    </tr>
+    <tr>
+      <th class="table__head table__body">Bio</th>
+      <th class="table__body"><%= @user_show.bio %></th>
+    </tr>
+  </table>
+</div>
