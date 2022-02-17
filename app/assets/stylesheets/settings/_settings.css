@@ -6,6 +6,7 @@
   --space-xx-small: calc(0.25*var(--space-unit));
   --space-x-small: calc(0.5*var(--space-unit));
   --space-small: calc(0.75*var(--space-unit));
+  --space-minor: calc(0.80*var(--space-unit));
   --space-medium: calc(1.25*var(--space-unit));
   --space-large: calc(2*var(--space-unit));
   --space-x-large: calc(3*var(--space-unit));

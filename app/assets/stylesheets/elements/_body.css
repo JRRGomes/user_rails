@@ -1,3 +1,4 @@
 body {
   font-family: var(--main-font);
+  color: var(--dark-grey);
 }

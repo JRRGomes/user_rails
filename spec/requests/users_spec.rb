@@ -24,8 +24,8 @@ RSpec.describe "Users", type: :request do
 
   describe "POST /create" do
     it "returns http success" do
-      post "/users#create"
-      expect(response).to have_http_status(:success)
+      post "/users#create", :params => { :user => {:name => "someone"} }
+      expect(response).to have_http_status(:redirect)
     end
   end
 

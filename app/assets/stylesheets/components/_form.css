@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+}
+
+.form__input {
+  display: flex;
+  margin: var(--space-unit) 0 var(--space-unit) 0;
+}
+
+.form__label {
+  padding: 0 var(--space-unit) 0 0;
+}
