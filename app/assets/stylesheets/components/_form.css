@@ -1,12 +1,27 @@
 .form {
   display: flex;
+  font-size: var(--space-minor);
 }
 
 .form__input {
-  display: flex;
+  display: block;
   margin: var(--space-unit) 0 var(--space-unit) 0;
 }
 
 .form__label {
-  padding: 0 var(--space-unit) 0 0;
+  padding: 0 0 var(--space-xx-small) 0;
+}
+
+.form__error {
+  padding-top: var(--space-x-small);
+  color: var(--red);
+}
+
+.form__text {
+  width: 100%;
+}
+
+.form__submit {
+  display: flex;
+  justify-content: center;
 }

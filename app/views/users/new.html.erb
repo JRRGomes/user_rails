@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h1>New User</h1>
+  <h2>New User</h2>
 </div>
 <div class="container">
   <div class="form">
@@ -10,11 +10,11 @@
         <%= form.label :name %>
       </div>
       <div>
-        <%= form.text_field :name %>
+        <%= form.text_field :name, class: 'form__text' %>
       </div>
       <div>
         <% @user.errors.full_messages_for(:name).each do |message| %>
-        <div><%= message %></div>
+        <div class="form__error"><%= message %></div>
         <% end %>
       </div>
     </div>
@@ -24,16 +24,21 @@
         <%= form.label :age %>
       </div>
       <div>
-        <%= form.number_field :age, in: 1..150 %>
+        <%= form.number_field :age, in: 1..150, class: 'form__text' %>
+      </div>
+    </div>
+    <div class="form__input">
+      <div>
+        <div class="form__label">
+          <%= form.label :bio %>
+        </div>
+        <div>
+          <%= form.text_area :bio, class: 'form__text'%>
+        </div>
       </div>
     </div>
       
-    <div>
-      <%= form.label :bio %>
-      <%= form.text_area :bio %>
-    </div>
-    
-    <div>
+    <div class="form__submit">
       <%= form.submit class: 'button' %>
     </div>
     <% end %>
