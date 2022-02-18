@@ -4,7 +4,7 @@ RSpec.describe "Users", type: :request do
   describe "GET /index" do
     context 'when requesting /users' do
       it "returns http success" do
-        get "/users#index"
+        get user_path
         expect(response).to have_http_status(:success)
       end
     end
@@ -20,7 +20,7 @@ RSpec.describe "Users", type: :request do
 
   describe "GET /new" do
     it "returns http success" do
-      get "/users#new"
+      get users_new_path
       expect(response).to have_http_status(:success)
     end
   end
