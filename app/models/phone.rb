@@ -5,15 +5,13 @@ class Phone < ApplicationRecord
   validates :primary, :inclusion => { :in => [true, false] }
   validates :primary, uniqueness: { scope: :contact_id }, if: :primary
 
-  before_validation :check_if_primary_true
+  before_save :disable_previous_primary, if: :primary
 
   def check_if_primary_true
-    return unless primary
-
-    phone_list = Phone.all
-    phone_list.each do |bool|
-      if bool['primary'] == true
-        bool.update_attribute(:primary, false)
+    phones = Phone.all
+    phones.each do |phone|
+      if phone['primary'] == true
+        phone.update_attribute(:primary, false)
       end
     end
   end
