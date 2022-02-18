@@ -25,17 +25,16 @@ RSpec.describe "Users", type: :request do
     end
   end
 
-  describe "POST /create" do
-    context 'when requesting users#create' do
-      it "returns http success" do
-        post "/users#create", :params => { :user => {:name => "someone"} } #users_path
-        expect(response).to have_http_status(:redirect)
+  describe 'POST /create' do
+    context 'when creating user with valid atributes' do
+      it 'should create new user' do
+        expect { post users_path, params: { user: attributes_for(:user) } }.to change(User, :count).by(1)
       end
+    end
 
-      context 'when creating user with valid atributes' do
-        it 'should create new user' do
-          expect { post '/users', params: { user: attributes_for(:user) } }.to change(User, :count).by(1)
-        end
+    context 'when creating user with invalid atributes' do
+      it 'should not create new user' do
+        expect { post users_path, params: { user: attributes_for(:invalid_user) } }.to_not change(User, :count)
       end
     end
   end
