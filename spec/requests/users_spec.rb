@@ -11,8 +11,9 @@ RSpec.describe "Users", type: :request do
   end
 
   describe "GET /show" do
+    let(:user) { create(:user) }
     it "returns http success" do
-      get user_path(attributes_for(:user))
+      get user_path(user.id)
       expect(response).to have_http_status(:success)
     end
   end
