@@ -1,25 +1,25 @@
 require 'rails_helper' 
 
-RSpec.describe "Users", type: :request do
-  describe "GET /index" do
+RSpec.describe 'Users', type: :request do
+  describe 'GET /index' do
     context 'when requesting /users' do
-      it "returns http success" do
+      it 'returns http success' do
         get users_path
         expect(response).to have_http_status(:success)
       end
     end
   end
 
-  describe "GET /show" do
-    let(:user) { create(:user) }
-    it "returns http success" do
+  describe 'GET /show' do
+    let(:user) { create!(:user) }
+    it 'returns http success' do
       get user_path(user.id)
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET /new" do
-    it "returns http success" do
+  describe 'GET /new' do
+    it 'returns http success' do
       get users_new_path
       expect(response).to have_http_status(:success)
     end
@@ -39,23 +39,23 @@ RSpec.describe "Users", type: :request do
     end
   end
 
-  describe "POST /edit" do
-    it "returns http success" do
-      post "/users/edit"
+  describe 'POST /edit' do
+    it 'returns http success' do
+      post '/users/edit'
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "POST /update" do
-    it "returns http success" do
-      post "/users/update"
+  describe 'POST /update' do
+    it 'returns http success' do
+      post '/users/update'
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "DELETE /destroy" do
-    it "returns http success" do
-      delete "/users/destroy"
+  describe 'DELETE /destroy' do
+    it 'returns http success' do
+      delete '/users/destroy'
       expect(response).to have_http_status(:success)
     end
   end
