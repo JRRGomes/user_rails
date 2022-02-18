@@ -4,6 +4,6 @@ FactoryBot.define do
   end
 
   factory :invalid_user, parent: :user do |f|
-    f.name nil
+    f.name { nil }
   end
 end
