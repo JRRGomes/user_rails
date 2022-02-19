@@ -20,9 +20,14 @@
         <th><%= user.bio %></th>
         <th><%= user.contacts.length %></th>
         <th><%= user.phones.length %></th>
-        <th><%= link_to 'Show', user %></th>
+        <th><%= link_to 'Show', user, class: 'button__show' %></th>
       </tr>
     <% end %>
     </tbody>
   </table>
+</div>
+<div class="container">
+  <div class="button">
+    <%= link_to 'New User', users_new_path %>
+  </div>
 </div>

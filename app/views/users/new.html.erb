@@ -1,2 +1,46 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+<div class="container">
+  <h2>New User</h2>
+</div>
+<div class="container">
+  <div class="form">
+    <%= form_with model: @user do |form| %>
+    <div class="form__input">
+      <div class="form__label">
+        <%= form.label :name %>
+      </div>
+      <div>
+        <%= form.text_field :name, class: 'form__text' %>
+      </div>
+      <div>
+        <% @user.errors.full_messages_for(:name).each do |message| %>
+        <div class="form__error"><%= message %></div>
+        <% end %>
+      </div>
+    </div>
+  
+    <div class="form__input">
+      <div class="form__label">
+        <%= form.label :age %>
+      </div>
+      <div>
+        <%= form.number_field :age, in: 1..150, class: 'form__text' %>
+      </div>
+    </div>
+    <div class="form__input">
+      <div>
+        <div class="form__label">
+          <%= form.label :bio %>
+        </div>
+        <div>
+          <%= form.text_area :bio, class: 'form__text'%>
+        </div>
+      </div>
+    </div>
+      
+    <div class="form__submit">
+      <%= form.submit class: 'button' %>
+    </div>
+    <% end %>
+  </div>
+</div>
